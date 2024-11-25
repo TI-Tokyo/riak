@@ -832,10 +832,19 @@ case "$1" in
         fi
         shift
 
-        # Make sure the local node is running
         node_up_check
-
         NODETOOL rpc riak_kv_console aae_status "$@"
+        ;;
+
+    aae[_-]progress[_-]report)
+        if [ $# -ne 1 ]; then
+            echo "Usage: $SCRIPT $1"
+            exit 1
+        fi
+        shift
+
+        node_up_check
+        NODETOOL rpc riak_kv_console aae_progress_report "$@"
         ;;
 
     ensemble[_-]status)
