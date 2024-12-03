@@ -26,7 +26,7 @@ usage() {
     echo "                    reip | js-reload | erl-reload | wait-for-service | "
     echo "                    ringready | transfers | force-remove | down |"
     echo "                    cluster-info | member-status | ring-status | vnode-status |"
-    echo "                    aae-status | diag | stat | status | transfer-limit | reformat-indexes |"
+    echo "                    aae-status | aae-progress-report | diag | stat | status | transfer-limit | reformat-indexes |"
     echo "                    top [-interval N] [-sort reductions|memory|msg_q] [-lines N] |"
     echo "                    downgrade-objects | security | bucket-type | repair-2i |"
     echo "                    search | services | ensemble-status | handoff | set |"
@@ -837,8 +837,10 @@ case "$1" in
         ;;
 
     aae[_-]progress[_-]report)
-        if [ $# -ne 1 ]; then
-            echo "Usage: $SCRIPT $1"
+        if [ "$2" == "--help" ]; then
+            echo "Usage: $SCRIPT aae-progress-report --show=WHAT"
+            echo "where WHAT can be a comma-separated combination of"
+            echo "\"unbuilt\", \"built\", \"rebuilding\" and \"building\", or \"all\""
             exit 1
         fi
         shift
