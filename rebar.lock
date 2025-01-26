@@ -56,7 +56,7 @@
   1},
  {<<"leveled">>,
   {git,"https://github.com/OpenRiak/leveled",
-       {ref,"ae82397eb82af60b0baf8dc80eb19ab3baaab0fa"}},
+       {ref,"e6269b121ce2845fca86a490fd481fe90e4921ea"}},
   2},
  {<<"lz4">>,
   {git,"https://github.com/OpenRiak/erlang-lz4",
@@ -113,7 +113,7 @@
   2},
  {<<"riak_kv">>,
   {git,"https://github.com/OpenRiak/riak_kv",
-       {ref,"9cb8d0085c9946250d0a6a237d171dedb1d51fd9"}},
+       {ref,"fe9d3ab121acb0694ddd6cb23e4e0d8f837194eb"}},
   0},
  {<<"riak_pb">>,
   {git,"https://github.com/OpenRiak/riak_pb.git",
@@ -150,7 +150,7 @@
   2},
  {<<"zstd">>,
   {git,"https://github.com/OpenRiak/zstd-erlang",
-       {ref,"1d5c3486030222b8368eee6f4fec5c5d92e64336"}},
+       {ref,"0027a594416c3e98335ffeec4ebebcfcd4bc80d9"}},
   3}]}.
 [
 {pkg_hash,[

@@ -1,3 +1,13 @@
+# Riak KV 3.2.4 Release Notes
+
+This release contains the following fixes and enhancements:
+
+- Improve the performance of [`riak admin status` requests whether via or console or web](https://github.com/OpenRiak/riak_kv/pull/59).  Note that the statistic for `sys_monitor_count` will no longer produced as part of this change - but it can be checked if required using the `riak_kv_util:sys_monitor_count/0` function.
+- [Fix an issue with the partial merge feature](https://github.com/martinsumner/leveled/pull/473) introduced to the leveled backend in Riak 3.2.3, which could cause vnodes to crash and restart.
+- Improve the handling of handoff object folds in leveled to prevent handoff crashes due to [bugs](https://github.com/martinsumner/leveled/pull/469) or [inefficiency that could lead to timeouts](https://github.com/martinsumner/leveled/pull/467).
+
+Although the issue with partial merge is only expected to occur in relatively rare circumstances, it is recommended that installations presently on Riak 3.2.3 and using the leveled backend, should schedule an upgrade to 3.2.4 as soon as possible.
+
 # Riak KV 3.2.3 Release Notes
 
 Some minor fixes and enhancements:
