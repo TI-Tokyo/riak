@@ -6,7 +6,7 @@ This release contains the following fixes and enhancements:
 - [Fix an issue with the partial merge feature](https://github.com/martinsumner/leveled/pull/473) introduced to the leveled backend in Riak 3.2.3, which could cause vnodes to crash and restart.
 - Improve the handling of handoff object folds in leveled to prevent handoff crashes due to [bugs](https://github.com/martinsumner/leveled/pull/469) or [inefficiency that could lead to timeouts](https://github.com/martinsumner/leveled/pull/467).
 
-Although the issue with partial merge is only expected to occur in relatively rare circumstances, it is recommended that installations with a leveled backend presently on Riak 3.2.3, should be scheduled to upgrade to 3.2.4 as soon as possible.
+Although the issue with partial merge is only expected to occur in relatively rare circumstances, it is recommended that installations presently on Riak 3.2.3 and using the leveled backend, should schedule an upgrade to 3.2.4 as soon as possible.
 
 # Riak KV 3.2.3 Release Notes
 
