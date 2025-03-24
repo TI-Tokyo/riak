@@ -1,3 +1,9 @@
+# Riak KV 3.2.5 Release Notes
+
+This release is a minor fix to the NextGenRepl full-sync mechanism.  There has existed a workaround to the issue since [Riak 3.0.10](https://github.com/OpenRiak/riak/blob/openriak-3.2/RELEASE-NOTES.md#riak-kv-3010-release-notes), and that workaround was made more efficient in [Riak 3.2.3](https://github.com/OpenRiak/riak/blob/openriak-3.2/RELEASE-NOTES.md#riak-kv-323-release-notes).  This release includes an attempt to resolve a potential root cause, which is [an issue with modifications to AAE caches when the previous vector clock hashed to precisely 0](https://github.com/OpenRiak/riak_kv/issues/32).
+
+The release also fixes [an issue with implementation of the `data_size/1` callback in leveled](https://github.com/OpenRiak/riak_kv/issues/29). 
+
 # Riak KV 3.2.4 Release Notes
 
 This release contains the following fixes and enhancements:
