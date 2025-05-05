@@ -617,13 +617,6 @@ The follow commands can be used to manage bucket types for the cluster:
 }
 
 
-tictacaae_admin()
-{
-    # this command will print usage in erlang code
-    rpc riak_kv_console tictacaae_cmd "$@"
-}
-
-
 
 # Check the first argument for instructions
 case "$1" in
@@ -1042,7 +1035,7 @@ case "$1" in
         ;;
     tictacaae)
         shift
-        tictacaae_admin "$@"
+        rpc riak_kv_console command $SCRIPT tictacaae "$@"
         ;;
     *)
         usage
