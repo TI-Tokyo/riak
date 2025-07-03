@@ -150,7 +150,7 @@
                        "b74f0adb0686848de9bd979408ed7ad87c81bf94"}},
        {riak_kv,".*",
                 {git,"git://github.com/TI-Tokyo/riak_kv.git",
-                     "8cb988f72238ad08bdc14f1b69c290d4550ce085"}},
+                     "a67da409db32fe9bdd35f31a53b1a52f0eff409c"}},
        {erlydtl,".*",
                 {git,"git://github.com/erlydtl/erlydtl.git",
                      "d20b53f04837a1053ed18987f645cb60eae82453"}},
