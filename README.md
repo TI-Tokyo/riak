@@ -12,6 +12,16 @@
 | kv_index_tictactree | ![Tictac Tree OpenRiak Status](https://github.com/OpenRiak/kv_index_tictactree/actions/workflows/erlang.yml/badge.svg?branch=openriak-3.4) |
 | bitcask | ![Bitcask OpenRiak Status](https://github.com/OpenRiak/bitcask/actions/workflows/erlang.yml/badge.svg?branch=openriak-3.2) |
 
+## OTP version support
+
+Riak is built on top of the [Erlang/OTP platform](https://github.com/erlang/otp).  Supported versions for this release are:
+
+![OTP Recommended](https://img.shields.io/badge/OTP_Recommended_Version-_OTP_26_-green)
+
+![OTP Supported](https://img.shields.io/badge/OTP_Backwards_Compatible-_OTP_24_-blue)
+
+For other OTP versions, an alternative `openriak-<release>` branch will be required.  See [the roadmap discussion](https://github.com/orgs/OpenRiak/discussions/19) for further details.
+
 ## Why Riak?
 
 Riak is a distributed key-value store, designed to provide high-availability with predictable response times in the presence of complex failure scenarios. It can be configured to provide assurance against data loss, even where individual nodes have ephemeral storage, and groups of nodes can be concurrently impacted by failure events. It is a reliable system whilst running on simple, low-cost, commodity components - remaining highly available without the need for urgent operator intervention.
@@ -26,7 +36,7 @@ Riak is built almost entirely using BEAM technology, a platform designed from th
 
 ## Getting Started
 
-To build Riak, Erlang OTP 24 is preferred.
+To build Riak, Erlang OTP 26 is recommended.
 
 `make rel` will build a release which can be run via `rel/riak/bin/riak daemon`.  Riak is primarily configured via `rel/riak/etc/riak.conf`
 
