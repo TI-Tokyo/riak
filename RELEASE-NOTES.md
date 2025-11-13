@@ -1,3 +1,41 @@
+# Riak KV 3.4.0 RC0 Release Notes
+
+This release is a release candidate for the OpenRiak release of Riak 3.4.0.  It contains the two major features planned for Riak 3.4.0:
+
+- A new Query API; [draft documentation available here](https://github.com/OpenRiak/riak_kv/blob/openriak-3.4/docs/QueryAPI.md).
+- The addition of consensus supported conditional PUT logic; [draft documentation available here](https://github.com/OpenRiak/riak_kv/blob/openriak-3.4/docs/ObjectAPI.md#conditional-requests).
+
+There are further updates planned prior to the formal release of Riak 3.4.0, but no other major features.  Additional updates will be focused on operational improvements.
+
+The Riak 3.4.0 release is planned to support OTP 26, and OTP 24 initially, but for performance reasons the use of OTP 26 is recommended.
+
+# Riak KV 3.2.6 Release Notes
+
+This release includes:
+
+- A performance-related fix to [avoid use of the deprecated erlang phash library](https://github.com/OpenRiak/riak_kv/pull/53).
+- A fix to allow configuration of [IPv6 addresses in nextgenrepl peer strings](https://github.com/OpenRiak/riak_kv/pull/40).
+- An update to the build system for [eleveldb to improve long-term stability of the build process](https://github.com/OpenRiak/eleveldb/pull/5).
+- Minor changes associated with future OTP compatibility.
+
+The release should be used with OTP 24 only.
+
+# Riak KV 3.2.5 Release Notes
+
+This release is a minor fix to the NextGenRepl full-sync mechanism.  There has existed a workaround to the issue since [Riak 3.0.10](https://github.com/OpenRiak/riak/blob/openriak-3.2/RELEASE-NOTES.md#riak-kv-3010-release-notes), and that workaround was made more efficient in [Riak 3.2.3](https://github.com/OpenRiak/riak/blob/openriak-3.2/RELEASE-NOTES.md#riak-kv-323-release-notes).  This release includes an attempt to resolve a potential root cause, which is [an issue with modifications to AAE caches when the previous vector clock hashed to precisely 0](https://github.com/OpenRiak/riak_kv/issues/32).
+
+The release also fixes [an issue with implementation of the `data_size/1` callback in leveled](https://github.com/OpenRiak/riak_kv/issues/29). 
+
+# Riak KV 3.2.4 Release Notes
+
+This release contains the following fixes and enhancements:
+
+- Improve the performance of [`riak admin status` requests whether via or console or web](https://github.com/OpenRiak/riak_kv/pull/59).  Note that the statistic for `sys_monitor_count` will no longer produced as part of this change - but it can be checked if required using the `riak_kv_util:sys_monitor_count/0` function.
+- [Fix an issue with the partial merge feature](https://github.com/martinsumner/leveled/pull/473) introduced to the leveled backend in Riak 3.2.3, which could cause vnodes to crash and restart.
+- Improve the handling of handoff object folds in leveled to prevent handoff crashes due to [bugs](https://github.com/martinsumner/leveled/pull/469) or [inefficiency that could lead to timeouts](https://github.com/martinsumner/leveled/pull/467).
+
+Although the issue with partial merge is only expected to occur in relatively rare circumstances, it is recommended that installations presently on Riak 3.2.3 and using the leveled backend, should schedule an upgrade to 3.2.4 as soon as possible.
+
 # Riak KV 3.2.3 Release Notes
 
 Some minor fixes and enhancements:
