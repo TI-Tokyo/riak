@@ -15,7 +15,6 @@
        runtime_tools,
        cluster_info,
        riak_kv,
-       riak_repl,
        riak_auth_mods
        ]},
    {env, []}
