@@ -3,10 +3,10 @@ name: Erlang CI
 on:
   push:
     branches:
-      - openriak-3.4
+      - openriak-4.0
   pull_request:
     branches:
-      - openriak-3.4
+      - openriak-4,0
 
 jobs:
 

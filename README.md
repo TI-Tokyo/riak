@@ -4,21 +4,19 @@
 
 | Component  |     Status      |
 |:----------|:-------------:|
-| riak_core |  ![Riak Core OpenRiak Status](https://github.com/OpenRiak/riak_core/actions/workflows/erlang.yml/badge.svg?branch=openriak-3.4) |
-| riak_kv |    ![Riak KV OpenRiak Status](https://github.com/OpenRiak/riak_kv/actions/workflows/erlang.yml/badge.svg?branch=openriak-3.4)  |
-| riak_repl | ![Riak Repl OpenRiak Status](https://github.com/OpenRiak/riak_repl/actions/workflows/erlang.yml/badge.svg?branch=openriak-3.4) |
-| riak_pipe | ![Riak Pipe OpenRiak Status](https://github.com/OpenRiak/riak_pipe/actions/workflows/erlang.yml/badge.svg?branch=openriak-3.4) |
-| leveled | ![Leveled OpenRiak Status](https://github.com/OpenRiak/leveled/actions/workflows/erlang.yml/badge.svg?branch=openriak-3.4) |
-| kv_index_tictactree | ![Tictac Tree OpenRiak Status](https://github.com/OpenRiak/kv_index_tictactree/actions/workflows/erlang.yml/badge.svg?branch=openriak-3.4) |
-| bitcask | ![Bitcask OpenRiak Status](https://github.com/OpenRiak/bitcask/actions/workflows/erlang.yml/badge.svg?branch=openriak-3.2) |
+| riak_core |  ![Riak Core OpenRiak Status](https://github.com/OpenRiak/riak_core/actions/workflows/erlang.yml/badge.svg?branch=openriak-4.0) |
+| riak_kv |    ![Riak KV OpenRiak Status](https://github.com/OpenRiak/riak_kv/actions/workflows/erlang.yml/badge.svg?branch=openriak-4.0)  |
+| leveled | ![Leveled OpenRiak Status](https://github.com/OpenRiak/leveled/actions/workflows/erlang.yml/badge.svg?branch=openriak-4.0) |
+| kv_index_tictactree | ![Tictac Tree OpenRiak Status](https://github.com/OpenRiak/kv_index_tictactree/actions/workflows/erlang.yml/badge.svg?branch=openriak-4.0) |
+| bitcask | ![Bitcask OpenRiak Status](https://github.com/OpenRiak/bitcask/actions/workflows/erlang.yml/badge.svg?branch=openriak-4.0) |
 
 ## OTP version support
 
 Riak is built on top of the [Erlang/OTP platform](https://github.com/erlang/otp).  Supported versions for this release are:
 
-![OTP Recommended](https://img.shields.io/badge/OTP_Recommended_Version-_OTP_26_-green)
+![OTP Recommended](https://img.shields.io/badge/OTP_Recommended_Version-_OTP_28_-green)
 
-![OTP Supported](https://img.shields.io/badge/OTP_Backwards_Compatible-_OTP_24_-blue)
+![OTP Supported](https://img.shields.io/badge/OTP_Backwards_Compatible-_OTP_26_-blue)
 
 For other OTP versions, an alternative `openriak-<release>` branch will be required.  See [the roadmap discussion](https://github.com/orgs/OpenRiak/discussions/19) for further details.
 
@@ -36,7 +34,7 @@ Riak is built almost entirely using BEAM technology, a platform designed from th
 
 ## Getting Started
 
-To build Riak, Erlang OTP 26 is recommended.
+To build Riak, Erlang OTP 28 is recommended.
 
 `make rel` will build a release which can be run via `rel/riak/bin/riak daemon`.  Riak is primarily configured via `rel/riak/etc/riak.conf`
 
