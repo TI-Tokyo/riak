@@ -17,6 +17,8 @@ fmt() {
 rpc() {
     local mod=$1
     local fun=$2
+    export USE_NODETOOL="true"
+
     shift 2
     if [ $# -gt 0 ]; then
         "${PLATFORM_BIN_DIR}/riak" rpc $mod $fun `fmt "$@"`
@@ -28,6 +30,8 @@ rpc() {
 rpc_raw() {
     local mod=$1
     local fun=$2
+    export USE_NODETOOL="true"
+    
     "${PLATFORM_BIN_DIR}/riak" rpc $mod $fun "$3"
 }
 
