@@ -617,6 +617,13 @@ The follow commands can be used to manage bucket types for the cluster:
 }
 
 
+tictacaae_admin()
+{
+    # this command will print usage in erlang code
+    rpc riak_kv_console tictacaae_cmd "$@"
+}
+
+
 
 # Check the first argument for instructions
 case "$1" in
@@ -792,7 +799,7 @@ case "$1" in
             echo "Lists the services available on the node. See also: wait-for-service"
             exit 1
         fi
-        rpc_raw riak_core_node_watcher services
+        rpc riak_core_node_watcher services
         ;;
 
     wait[_-]for[_-]service)
@@ -1035,7 +1042,7 @@ case "$1" in
         ;;
     tictacaae)
         shift
-        rpc riak_kv_console command $SCRIPT tictacaae "$@"
+        tictacaae_admin "$@"
         ;;
     *)
         usage
