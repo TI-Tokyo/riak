@@ -128,8 +128,8 @@
        {ref,"ed6d4cfcf107385d3e0b6f7517a9a46c7104abbe"}},
   2},
  {<<"riak_kv">>,
-  {git,"https://github.com/TI-Tokyo/riak_kv",
-       {ref,"01ab631dd9c38bbdfb5fb30f7d2c52f6b1c0cbf9"}},
+  {git,"https://github.com/OpenRiak/riak_kv",
+       {ref,"f4ed77e0c17caf14fe70d12a3b3481b0181f8cc5"}},
   0},
  {<<"riak_logger">>,
   {git,"https://github.com/OpenRiak/riak_logger",
@@ -174,5 +174,4 @@
  {<<"zstd">>,
   {git,"https://github.com/OpenRiak/zstd-erlang",
        {ref,"7409e92a7c3122b2de4f591292eb2eec19ffb12a"}},
-  2}
-].
+  2}].
